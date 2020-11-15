@@ -1,0 +1,81 @@
+.search
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 40px
+  margin-bottom: 80px
+  .search-input
+    border: solid 1px #E6E6EA
+    height: 44px
+    width: 100%
+    padding: 16px 16px 16px 10px
+    border-radius: 2px
+    font-size: 18px
+    font-weight: 400
+    color: black
+    font-family: "Helvetica Neue"
+    margin-right:16px
+    transition: all 0.2s ease-out
+    &::placeholder
+      color: #B7B8B8
+    &:focus
+      outline: 0
+      transition: all 0.2s ease-out
+      border: 1px solid cadetblue
+
+    
+.container
+  margin: 0 auto
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+
+.title
+  font-family: "Helvetica Neue"
+  display: block
+  font-weight: 300
+  font-size: 100px
+  color: #35495e
+  letter-spacing: 1px
+  &.user-title
+    font-size: 30px
+    cursor: pointer
+    border-bottom: 1px solid lightgray
+    padding: 4px
+    transition: all 0.2s ease-out
+    &:hover
+     text-decoration: underline
+     color: cadetblue
+
+
+.subtitle
+  font-weight: 300
+  font-size: 42px
+  color: #526488
+  word-spacing: 5px
+  padding-bottom: 15px
+
+.links
+  padding-top: 15px
+
+.result-title
+  justify-content: space-between
+  margin-top: 50px
+  margin-bottom: 25px
+  li
+    display: flex
+    justify-content: space-between
+    align-items: center
+    list-style-type: none
+  h4
+    color: #526488
+    font-weight: 600
+    border-left: 2px solid #526488
+    white-space: nowrap
+    margin-bottom: 10px
+    padding: 5px
+  p
+    color: black
+    font-weight: 300
+    padding: 20px 80px
