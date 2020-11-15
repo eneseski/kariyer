@@ -37,12 +37,12 @@ const store = () => {
             },
             filteredKeyword(state) {
                 return state.users.filter((users) => {
-                    return users.name.match(state.searchKeyword);
+                    return users.name.includes(state.searchKeyword);
                 });
             },
             filteredUserName(state) {
                 return state.users.filter((users) => {
-                    return users.username.match(state.searchKeyword);
+                    return users.username.includes(state.searchKeyword);
                 });
             }
         },
