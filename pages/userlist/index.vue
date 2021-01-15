@@ -4,10 +4,13 @@
           <h1 class="title">Kullanıcılar</h1>
             <div class="search">
               <input class="search-input" @input="searchFiltered" type="text" placeholder="Anahtar Kelime" v-model="query">
-              <input class="search-input" @input="searchFiltered" type="text" placeholder="Kullanıcı Adı" v-model="username">
+              <!-- <input class="search-input" @input="searchFiltered" type="text" placeholder="Kullanıcı Adı" v-model="username"> -->
             </div>
           <ul v-for="(item,index) in userList" :key="index" class="link-title">
-            <li class="title user-title" v-text="item.name"  @click="showUsers(item.id)"></li>
+            <li>
+              <a class="title user-title" v-text="item.name"  @click="showUsers(item.id)"></a>
+              <!-- <button class="button-red" @click="deleteItem(item.id)">Sil</button> -->
+            </li>
           </ul>
         </div>
     </div>
@@ -19,13 +22,13 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      username: "",
+      // username: "",
       query: "",
       userList: [],
     };
   },
   computed: {
-    ...mapGetters(["filteredKeyword", "filteredUserName", "getUsers"]),
+    ...mapGetters(["filteredKeyword", "getUsers"]),
   },
   mounted() {
     this.userList = this.getUsers;
@@ -35,9 +38,6 @@ export default {
       if (this.query) {
         this.$store.dispatch("searchKeyword", this.query);
         this.userList = this.filteredKeyword;
-      } else {
-        this.$store.dispatch("searchKeyword", this.username);
-        this.userList = this.filteredUserName;
       }
     },
     showUsers(val) {

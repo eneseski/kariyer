@@ -24,6 +24,10 @@ html {
   margin: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;

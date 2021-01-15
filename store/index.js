@@ -40,11 +40,11 @@ const store = () => {
                     return users.name.includes(state.searchKeyword);
                 });
             },
-            filteredUserName(state) {
-                return state.users.filter((users) => {
-                    return users.username.includes(state.searchKeyword);
-                });
-            }
+            // filteredUserName(state) {
+            //     return state.users.filter((users) => {
+            //         return users.username.includes(state.searchKeyword);
+            //     });
+            // }
         },
     })
 }
